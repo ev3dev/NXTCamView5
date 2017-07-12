@@ -1,0 +1,23 @@
+Source: nxtcamview5
+Maintainer: David Lechner <david@lechnology.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.7
+Build-Depends: debhelper (>=9.0.0),
+    chrpath,
+    libqt5serialport5-dev,
+    qt5-qmake,
+    qtbase5-dev,
+    qtbase5-private-dev,
+    qtdeclarative5-dev,
+    qttools5-dev,
+    qttools5-dev-tools
+VCS-Git: https://github.com/ev3dev/NXTCamView5.git
+VCS-Browser: https://github.com/ev3dev/NXTCamView5
+
+Package: nxtcamview5
+Section: utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Configuration tool for mindsensors.com NXTCamView5
+ Configuration tool for mindsensors.com NXTCamView5.

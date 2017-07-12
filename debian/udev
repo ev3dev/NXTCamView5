@@ -1,0 +1,4 @@
+# mindsensors.com NxtCam5
+# This file is part of the nxtcamview5 package
+
+SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="1209", ENV{ID_MODEL_ID}=="4d53", MODE="0666"

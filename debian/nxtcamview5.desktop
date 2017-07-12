@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=nxtcamview5 %F
+Icon=nxtcamview5
+Type=Application
+Terminal=false
+Name=NXTCamView5
+GenericName=Hardware Configuration Tool
+Categories=Development;Utility;

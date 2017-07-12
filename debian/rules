@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+export QT_SELECT := qt5
+
+%:
+	dh $@ --buildsystem=qmake --builddirectory=build-deb
+
+override_dh_auto_configure:
+	dh_auto_configure -- -recursive ../qt-creator/qtcreator.pro
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/nxtcamview5/usr
+	rm -f debian/nxtcamview5/usr/bin/openmvide.sh
+	mkdir -p debian/nxtcamview5/usr/share/applications
+	cp debian/nxtcamview5.desktop debian/nxtcamview5/usr/share/applications
+
+override_dh_installudev:
+	# needs to be higher that standard serial rules, which is 60
+	dh_installudev --priority=70
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l$(CURDIR)/debian/nxtcamview5/usr/lib/nxtcamview5
