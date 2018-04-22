@@ -1,3 +1,9 @@
+nxtcamview5 (5.0.1~bionic1) bionic; urgency=medium
+
+  * bionic branch
+
+ -- David Lechner <david@lechnology.com>  Sun, 22 Apr 2018 18:18:18 -0500
+
 nxtcamview5 (5.0.1~artful1) artful; urgency=medium
 
   [ Deepak Patil ]
